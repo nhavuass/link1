@@ -559,3 +559,7 @@ video {
     color: #1c1e21;
     margin: 0;                     /* Xóa bỏ khoảng cách thừa */
 }
+/* Triệt tiêu khoảng cách thừa để logo bên phải và chữ bên trái thẳng hàng tuyệt đối */
+.top-header-bar .meta-container {
+    margin-bottom: 0 !important;
+}
