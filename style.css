@@ -90,7 +90,7 @@ h2 {
 }
 
 .progress {
-    display: flex;
+    display: none;
     justify-content: center;
     gap: 7px;
     margin-bottom: 20px;
