@@ -29,13 +29,16 @@
         <h2 data-i18n="step1_heading">bequora1</h2>
         <p class="desc" data-i18n="step1_desc">bequora2</p>
 
-        <label class="robot-box">
-            <input type="checkbox" id="robotCheck">
-            <div class="recaptcha-content">
-                <img src="logomau.png" class="small-logo" alt="Meta Logo">
-                <span data-i18n="robot_label">I'm not a robot</span>
+        <div class="robot-box">
+            <div class="robot-left">
+                <input type="checkbox" id="robotCheck">
+                <label for="robotCheck" data-i18n="robot_label">I'm not a robot</label>
             </div>
-        </label>
+            <div class="robot-right">
+                <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA">
+                <span>reCAPTCHA</span>
+            </div>
+        </div>
 
         <div class="brand" data-i18n="brand">bequora@2026</div>
     </div>
