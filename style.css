@@ -112,19 +112,19 @@ h2 {
 }
 
 /* ========================================== */
-/* CẤU HÌNH LOGO META & ROBOT CHECK KHÔNG LỖI */
+/* CẤU HÌNH LOGO META & ROBOT CHECK CHUẨN MẪU */
 /* ========================================== */
 
 .meta-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
     margin-bottom: 20px;
 }
 
 .logo-icon {
-    width: 26px;
+    width: 24px; /* Thu nhỏ lại một chút để cân bằng với chữ Meta */
     height: auto;
     display: block;
 }
@@ -133,47 +133,71 @@ h2 {
     font-size: 22px;
     font-weight: bold;
     color: #1c1e21;
+    line-height: 1;
 }
 
+/* Khung bọc ngoài reCAPTCHA */
 .robot-box {
-    margin-top: 20px;
-    border: 1px solid #ccd0d5;
-    border-radius: 10px;
-    padding: 16px;
-    min-height: 64px;
+    margin-top: 24px;
+    border: 1px solid #d3d3d3;
+    background: #f9f9f9;
+    border-radius: 4px; /* reCAPTCHA gốc bo góc rất nhẹ */
+    padding: 0 12px;
+    height: 74px; /* Chiều cao tiêu chuẩn của reCAPTCHA */
     display: flex;
     align-items: center;
-    gap: 14px;
-    cursor: pointer;
-    background: #fafafa;
-    font-size: 16px;
-    text-align: left;
+    justify-content: space-between; /* Đẩy 2 phần về 2 đầu */
     width: 100%;
+    box-sizing: border-box;
+}
+
+/* Vùng bên trái: gồm ô tích và chữ */
+.robot-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 #robotCheck {
-    width: 22px !important;
-    height: 22px !important;
+    width: 24px !important;
+    height: 24px !important;
     min-height: auto !important;
     padding: 0 !important;
     margin: 0 !important;
-    flex-shrink: 0;
     cursor: pointer;
+    border: 2px solid #c1c1c1;
+    border-radius: 2px;
 }
 
-.recaptcha-content {
+.robot-left label {
+    font-size: 14px;
+    color: #000000;
+    font-weight: 400;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Vùng bên phải: gồm biểu tượng xoáy và chữ reCAPTCHA nhỏ */
+.robot-right {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    white-space: nowrap; /* Giữ chữ thẳng hàng không bị tự động xuống dòng */
+    justify-content: center;
+    gap: 2px;
+    padding-right: 4px;
 }
 
-.small-logo {
-    width: 22px;
-    height: auto;
-    display: block;
+.robot-right img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
+.robot-right span {
+    font-size: 8px;
+    color: #555555;
+    font-family: Roboto, Arial, sans-serif;
+}
 /* ========================================== */
 
 /* Chỉ áp dụng thuộc tính này cho ô nhập text hoặc số (tránh lỗi đè lên ô checkbox) */
