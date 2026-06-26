@@ -528,3 +528,34 @@ video {
     margin-right: 8px;
     font-weight: bold;
 }
+/* ========================================== */
+/* CẤU HÌNH THANH TIÊU ĐỀ HAI BÊN (HEADER)    */
+/* ========================================== */
+
+.top-header-bar {
+    display: flex;
+    justify-content: space-between; /* Tự động đẩy khối trái và khối phải về hai đầu */
+    align-items: center;           /* Căn giữa các thành phần thẳng hàng theo chiều dọc */
+    width: 100%;
+    margin-bottom: 20px;           /* Khoảng cách từ tiêu đề xuống nội dung bên dưới */
+    padding: 5px 0;
+}
+
+.header-left-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;                     /* Khoảng cách cố định giữa logo mới và dòng chữ lớn */
+}
+
+.custom-top-logo {
+    width: 35px;                   /* Bạn tăng/giảm kích thước logo mới tại đây */
+    height: auto;
+    display: block;
+}
+
+.custom-top-title {
+    font-size: 18px;               /* Độ lớn dòng chữ */
+    font-weight: 700;              /* Độ đậm dòng chữ */
+    color: #1c1e21;
+    margin: 0;                     /* Xóa bỏ khoảng cách thừa */
+}
