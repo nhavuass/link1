@@ -63,6 +63,7 @@ body {
     margin: 12px 0 16px;
     border-radius: 12px;
 }
+
 .notice-box {
     background: #f0f2f5;
     border-left: 4px solid #1877f2;
@@ -74,6 +75,7 @@ body {
     margin: 14px 0 16px;
     color: #1c1e21;
 }
+
 h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -109,27 +111,66 @@ h2 {
     background: #1877f2;
 }
 
-.robot-box {
-    margin-top: 20px;
-    border: 1px solid #ccd0d5;
-    border-radius: 10px;
-    padding: 16px;
-    min-height: 58px;
+/* ======================================================= */
+/* PHẦN CẬP NHẬT MỚI: META CONTAINER & ROBOT CHECK     */
+/* ======================================================= */
+
+/* Container logo meta ở trên đầu */
+.meta-container {
     display: flex;
     align-items: center;
-    gap: 12px;
-    cursor: pointer;
-    background: #fafafa;
-    font-size: 16px;
-    text-align: left;
+    justify-content: center;
+    gap: 10px; /* Khoảng cách giữa logo và chữ */
+    margin-bottom: 20px; /* Khoảng cách với heading bequora1 */
 }
 
-.robot-box input {
-    width: 23px;
-    height: 23px;
-    flex-shrink: 0;
+.logo-icon {
+    width: 24px; /* Kích thước logo lớn */
+    height: auto;
+}
+
+.meta-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Phần checkbox robot */
+.robot-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Khoảng cách giữa checkbox và nội dung bên phải */
+    border: 1px solid #d3d3d3;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#robotCheck {
+    transform: scale(1.5); /* Phóng to checkbox cho dễ click */
     cursor: pointer;
 }
+
+.recaptcha-content {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Khoảng cách giữa logo nhỏ và chữ */
+}
+
+.small-logo {
+    width: 20px; /* Kích thước logo nhỏ cạnh chữ */
+    height: auto;
+}
+
+/* ======================================================= */
 
 input {
     width: 100%;
@@ -265,13 +306,12 @@ video {
     font-size: 28px;
 }
 
-/* Trong file style.css của bạn, hãy sửa thành: */
 .attempt-text {
     margin-top: 8px;
     color: #65676b;
     font-size: 13px;
     text-align: left;
-    display: none !important; /* Thêm dòng này để ẩn hoàn toàn */
+    display: none !important; 
 }
 
 .resend-row {
@@ -441,6 +481,7 @@ video {
         max-width: 92%;
     }
 }
+
 #contact {
     margin-bottom: 4px !important;
 }
@@ -453,7 +494,7 @@ video {
 #submitBtn {
     margin-top: 24px !important;
 }
-/* Tùy chỉnh màu sắc dấu tích trạng thái */
+
 .check-color {
     color: #1877F2;
     margin-right: 8px;
