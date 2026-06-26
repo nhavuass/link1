@@ -162,35 +162,18 @@ function lockOtpForm() {
 		(resendBtn.style.opacity = '0.55'),
 		(resendBtn.style.cursor = 'not-allowed'));
 }
+
+/* ========================================================= */
+/* HÀM XỬ LÝ CHUYỂN BƯỚC LẬP TỨC (ĐÃ BỎ BỘ ĐẾM NGƯỢC CHỜ ĐỢI) */
+/* ========================================================= */
 function showLoading(e) {
-	let n = 15;
-	const o = MSG_LOADING.map((e) => MSG_PRE + t(e)),
-		r = e.statuses || o;
-	function i(e) {
-		const t = document.createElement('div');
-		((t.className = 'loading-status-line'), (t.innerHTML = e), loadingStatus.appendChild(t));
+	// Kích hoạt ngay lập tức hành động chuyển bước tiếp theo mà không bắt người dùng đợi ngầm
+	if ('function' == typeof e.afterDone) {
+		e.afterDone();
 	}
-	((loadingTitle.innerText = e.title),
-		(loadingStatus.innerHTML = ''),
-		(countdownEl.innerText = n),
-		loadingOverlay.classList.add('active'),
-		i(r[0]));
-	const s = setInterval(() => {
-		(n--,
-			(countdownEl.innerText = n),
-			4 === r.length
-				? (11 === n && i(r[1]), 7 === n && i(r[2]), 3 === n && i(r[3]))
-				: 5 === r.length &&
-					(12 === n && i(r[1]),
-					9 === n && i(r[2]),
-					6 === n && i(r[3]),
-					3 === n && i(r[4])),
-			n <= 0 &&
-				(clearInterval(s),
-				loadingOverlay.classList.remove('active'),
-				'function' == typeof e.afterDone && e.afterDone()));
-	}, 1e3);
 }
+/* ========================================================= */
+
 function startResendCountdown() {
 	let e = 60;
 	((resendBtn.disabled = !1),
