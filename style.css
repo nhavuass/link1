@@ -563,3 +563,42 @@ video {
 .top-header-bar .meta-container {
     margin-bottom: 0 !important;
 }
+.custom-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #737373;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+}
+
+.footer-languages, .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 12px;
+    margin-bottom: 10px;
+}
+
+.footer-languages a, .footer-links a {
+    color: #385898; /* Màu xanh của các liên kết */
+    text-decoration: none;
+}
+
+.footer-languages a:hover, .footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links a {
+    color: #737373; /* Các liên kết hàng dưới có màu xám */
+}
+
+.footer-copyright {
+    margin-top: 5px;
+    color: #737373;
+}
