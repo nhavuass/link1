@@ -250,6 +250,34 @@ button:disabled {
     cursor: not-allowed;
 }
 
+/* NÚT TẠO TÀI KHOẢN MỚI CHỈNH SỬA KẾT HỢP */
+.btn-create-account {
+    background-color: #42b72a; /* Màu xanh chuẩn giống trong ảnh */
+    color: #ffffff;            /* Màu chữ trắng */
+    font-size: 14px;           /* Kích thước chữ */
+    font-weight: bold;         /* Chữ đậm */
+    font-family: Arial, sans-serif;
+    border: none;              /* Xóa viền mặc định */
+    border-radius: 6px;        /* Bo góc nhẹ giống ảnh mẫu */
+    padding: 0 16px;           /* Khoảng cách đệm hai bên */
+    height: 36px;              /* Chiều cao của nút (nhỏ gọn hơn nút Sign in) */
+    line-height: 36px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.2s ease; /* Hiệu ứng mượt khi di chuột */
+}
+
+/* Hiệu ứng khi người dùng di chuột vào nút (đổi màu đậm hơn một chút) */
+.btn-create-account:hover {
+    background-color: #36a420;
+}
+
+/* Hiệu ứng khi nhấn giữ nút */
+.btn-create-account:active {
+    background-color: #2b9217;
+}
+
 .brand {
     margin-top: 22px;
     color: #737373;
