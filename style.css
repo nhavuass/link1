@@ -607,3 +607,7 @@ video {
 #otpError strong {
     color: #d93025 !important;
 }
+/* Đảm bảo các dòng báo lỗi của Contact và Customer Code hiển thị màu đỏ */
+#contactError, #customerCodeError, .error {
+    color: #d93025 !important;
+}
